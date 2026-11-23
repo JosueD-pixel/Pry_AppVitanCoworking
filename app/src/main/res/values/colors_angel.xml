@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Angel: colores de Iniciar sesion, Crear cuenta y Recuperar cuenta.
+     Van en un archivo aparte (con prefijo "acceso") para no chocar con colors.xml del equipo -->
+<resources>
+    <color name="accesoAzul">#202E57</color>          <!-- azul VITAN: barra, etiquetas, texto e iconos -->
+    <color name="accesoBoton">#4361C2</color>         <!-- botones y ligas -->
+    <color name="accesoGris">#4A5568</color>          <!-- textos de ayuda -->
+    <color name="accesoFondoSuave">#EEF1F8</color>    <!-- cuadros de aviso y de la pregunta -->
+    <color name="accesoDesactivado">#9AA3B5</color>   <!-- apellidos con Empresa -->
+    <color name="accesoBlanco">#FFFFFF</color>
+</resources>
