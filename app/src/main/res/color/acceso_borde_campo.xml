@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Angel: borde de los cuadros de texto. Azul fuerte siempre (no gris palido);
+     gris solo cuando el campo esta desactivado (apellidos con Empresa) -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/accesoDesactivado" android:state_enabled="false" />
+    <item android:color="@color/accesoBoton" android:state_focused="true" />
+    <item android:color="@color/accesoAzul" />
+</selector>

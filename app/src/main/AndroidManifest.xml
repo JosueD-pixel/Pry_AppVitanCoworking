@@ -13,8 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pry_AppVitanCoworking">
+
+        <!-- La app abre en Iniciar sesion -->
         <activity
-            android:name=".Vista.MainActivity"
+            android:name=".Vista.LoginActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -23,6 +25,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Vista.RegistroActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Vista.RecuperarActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Pantalla temporal despues del login (hasta que suban Salas y Reservas) -->
+        <activity
+            android:name=".Vista.MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

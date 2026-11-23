@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Angel: borde del Spinner de la pregunta, igual que los cuadros de texto -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/accesoBlanco" />
+    <stroke android:width="2dp" android:color="@color/accesoAzul" />
+    <corners android:radius="10dp" />
+</shape>

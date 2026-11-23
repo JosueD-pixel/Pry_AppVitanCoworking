@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Angel: cuadro azul claro (aviso y pregunta de seguridad) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/accesoFondoSuave" />
+    <corners android:radius="10dp" />
+</shape>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Angel: texto del selector Cliente / Empresa -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/accesoAzul" android:state_checked="true" />
+    <item android:color="@color/accesoBoton" />
+</selector>
