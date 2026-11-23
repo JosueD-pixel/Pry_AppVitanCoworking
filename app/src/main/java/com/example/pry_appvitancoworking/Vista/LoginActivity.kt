@@ -89,9 +89,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     //Cliente o empresa: C01 Salas (Nathan).
-    //Mientras Nathan sube SalasActivity abre MainActivity; despues cambia MainActivity por SalasActivity
     fun abrirSalas() {
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, SalasActivity::class.java))
         finish()
     }
 

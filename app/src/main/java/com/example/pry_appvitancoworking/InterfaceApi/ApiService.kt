@@ -49,5 +49,4 @@ interface ApiService {
     //Lista de cancelaciones
     @GET("consultar_cancelaciones.php")
     suspend fun obtenerCancelaciones(): List<dataCancelacion>
-    // ... (abajo siguen las funciones de Ángel y Christian)
 }
