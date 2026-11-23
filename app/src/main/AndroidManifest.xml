@@ -38,6 +38,16 @@
         <activity
             android:name=".Vista.MainActivity"
             android:exported="false" />
+
+        <!-- Nathan: C01 Salas -->
+        <activity
+            android:name=".Vista.SalasActivity"
+            android:exported="false" />
+
+        <!-- Nathan: D03 Cancelaciones (administrador) -->
+        <activity
+            android:name=".Vista.CancelacionesActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
