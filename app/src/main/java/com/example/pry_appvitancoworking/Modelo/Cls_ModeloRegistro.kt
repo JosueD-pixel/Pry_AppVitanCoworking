@@ -3,8 +3,8 @@ package com.example.pry_appvitancoworking.Modelo
 import com.example.pry_appvitancoworking.Redes.RetrofitCliente
 
 class Cls_ModeloRegistro {
-    suspend fun crearCuenta(tipo: String, nombre: String, ap: String, am: String, correo: String, telefono: String, contrasena: String, pregunta: String, respuesta: String): RegistroResponse {
-        val request = RegistroRequest(tipo = tipo, nombre = nombre, ap = ap, am = am, correo = correo, telefono = telefono, contrasena = contrasena, pregunta_seguridad = pregunta, respuesta_seguridad = respuesta)
+    suspend fun crearCuenta(tipo: String, nombre: String, ap: String, am: String, correo: String, telefono: String, calle: String, colonia: String, cp: String, ciudad: String, contrasena: String, pregunta: String, respuesta: String): RegistroResponse {
+        val request = RegistroRequest(tipo = tipo, nombre = nombre, ap = ap, am = am, correo = correo, telefono = telefono, calle = calle, colonia = colonia, cp = cp, ciudad = ciudad, contrasena = contrasena, pregunta_seguridad = pregunta, respuesta_seguridad = respuesta)
         return RetrofitCliente.apiService.crearCuenta(request)
     }
 }
