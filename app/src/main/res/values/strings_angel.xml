@@ -28,6 +28,14 @@
     <string name="lblAp">Apellido paterno</string>
     <string name="lblAm">Apellido materno</string>
     <string name="lblTelefono">Teléfono (10 dígitos)</string>
+    <string name="lblCalle">Calle y número</string>
+    <string name="lblColonia">Colonia</string>
+    <string name="lblCp">Código postal</string>
+    <string name="lblCiudad">Ciudad</string>
+    <string name="phCalle"></string>
+    <string name="phColonia"></string>
+    <string name="phCp">Solo números</string>
+    <string name="phCiudad"></string>
     <string name="lblContrasenaMin">Contraseña (mínimo 8 caracteres)</string>
     <string name="lblPregunta">Pregunta de seguridad</string>
     <string name="lblRespuesta">Respuesta</string>

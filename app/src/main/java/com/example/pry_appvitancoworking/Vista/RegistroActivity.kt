@@ -34,6 +34,10 @@ class RegistroActivity : AppCompatActivity() {
     private lateinit var tilAm: TextInputLayout
     private lateinit var tilCorreo: TextInputLayout
     private lateinit var tilTelefono: TextInputLayout
+    private lateinit var tilCalle: TextInputLayout
+    private lateinit var tilColonia: TextInputLayout
+    private lateinit var tilCp: TextInputLayout
+    private lateinit var tilCiudad: TextInputLayout
     private lateinit var tilContrasena: TextInputLayout
     private lateinit var tilRespuesta: TextInputLayout
     private lateinit var etNombre: TextInputEditText
@@ -41,6 +45,10 @@ class RegistroActivity : AppCompatActivity() {
     private lateinit var etAm: TextInputEditText
     private lateinit var etCorreo: TextInputEditText
     private lateinit var etTelefono: TextInputEditText
+    private lateinit var etCalle: TextInputEditText
+    private lateinit var etColonia: TextInputEditText
+    private lateinit var etCp: TextInputEditText
+    private lateinit var etCiudad: TextInputEditText
     private lateinit var etContrasena: TextInputEditText
     private lateinit var etRespuesta: TextInputEditText
     private lateinit var spnPregunta: Spinner
@@ -66,6 +74,10 @@ class RegistroActivity : AppCompatActivity() {
         tilAm = findViewById(R.id.tilAm)
         tilCorreo = findViewById(R.id.tilCorreo)
         tilTelefono = findViewById(R.id.tilTelefono)
+        tilCalle = findViewById(R.id.tilCalle)
+        tilColonia = findViewById(R.id.tilColonia)
+        tilCp = findViewById(R.id.tilCp)
+        tilCiudad = findViewById(R.id.tilCiudad)
         tilContrasena = findViewById(R.id.tilContrasena)
         tilRespuesta = findViewById(R.id.tilRespuesta)
         etNombre = findViewById(R.id.etNombre)
@@ -73,6 +85,10 @@ class RegistroActivity : AppCompatActivity() {
         etAm = findViewById(R.id.etAm)
         etCorreo = findViewById(R.id.etCorreo)
         etTelefono = findViewById(R.id.etTelefono)
+        etCalle = findViewById(R.id.etCalle)
+        etColonia = findViewById(R.id.etColonia)
+        etCp = findViewById(R.id.etCp)
+        etCiudad = findViewById(R.id.etCiudad)
         etContrasena = findViewById(R.id.etContrasena)
         etRespuesta = findViewById(R.id.etRespuesta)
         spnPregunta = findViewById(R.id.spnPregunta)
@@ -126,6 +142,10 @@ class RegistroActivity : AppCompatActivity() {
             etAm.text.toString().trim(),
             etCorreo.text.toString().trim(),
             etTelefono.text.toString().trim(),
+            etCalle.text.toString().trim(),
+            etColonia.text.toString().trim(),
+            etCp.text.toString().trim(),
+            etCiudad.text.toString().trim(),
             etContrasena.text.toString(),
             spnPregunta.selectedItem.toString(),
             etRespuesta.text.toString().trim()
@@ -163,6 +183,10 @@ class RegistroActivity : AppCompatActivity() {
             "ap" -> tilAp.error = mensaje
             "correo" -> tilCorreo.error = mensaje
             "telefono" -> tilTelefono.error = mensaje
+            "calle" -> tilCalle.error = mensaje
+            "colonia" -> tilColonia.error = mensaje
+            "cp" -> tilCp.error = mensaje
+            "ciudad" -> tilCiudad.error = mensaje
             "contrasena" -> tilContrasena.error = mensaje
             "respuesta" -> tilRespuesta.error = mensaje
         }
@@ -173,6 +197,10 @@ class RegistroActivity : AppCompatActivity() {
         tilAp.error = null
         tilCorreo.error = null
         tilTelefono.error = null
+        tilCalle.error = null
+        tilColonia.error = null
+        tilCp.error = null
+        tilCiudad.error = null
         tilContrasena.error = null
         tilRespuesta.error = null
     }

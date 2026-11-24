@@ -19,7 +19,8 @@ class Cls_RegistroPresentador(private val vista: RegistroActivity) {
     }
 
     fun crearCuenta(esEmpresa: Boolean, nombre: String, ap: String, am: String, correo: String,
-                    telefono: String, contrasena: String, pregunta: String, respuesta: String) {
+                    telefono: String, calle: String, colonia: String, cp: String, ciudad: String,
+                    contrasena: String, pregunta: String, respuesta: String) {
         val tipo = if (esEmpresa) "empresa" else "cliente"
 
         //1 Validaciones (la API vuelve a revisar lo mismo)
@@ -39,6 +40,23 @@ class Cls_RegistroPresentador(private val vista: RegistroActivity) {
             vista.mostrarErrorCampo("telefono", "El teléfono debe tener 10 dígitos")
             return
         }
+        //domicilio: calle, colonia, codigo postal (5 numeros) y ciudad
+        if (calle.isEmpty()) {
+            vista.mostrarErrorCampo("calle", "Escribe la calle y número")
+            return
+        }
+        if (colonia.isEmpty()) {
+            vista.mostrarErrorCampo("colonia", "Escribe la colonia")
+            return
+        }
+        if (cp.length != 5) {
+            vista.mostrarErrorCampo("cp", "El código postal debe tener 5 dígitos")
+            return
+        }
+        if (ciudad.isEmpty()) {
+            vista.mostrarErrorCampo("ciudad", "Escribe la ciudad")
+            return
+        }
         if (contrasena.length < 8) {
             vista.mostrarErrorCampo("contrasena", "Mínimo 8 caracteres")
             return
@@ -54,7 +72,7 @@ class Cls_RegistroPresentador(private val vista: RegistroActivity) {
             try {
                 val resultado = withContext(Dispatchers.IO) {
                     modelo.crearCuenta(tipo, nombre, if (esEmpresa) "" else ap, if (esEmpresa) "" else am,
-                        correo, telefono, contrasena, pregunta, respuesta)
+                        correo, telefono, calle, colonia, cp, ciudad, contrasena, pregunta, respuesta)
                 }
                 vista.mostrarCargando(false)
                 vista.mostrarMensaje(resultado.mensaje)
