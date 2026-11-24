@@ -78,7 +78,6 @@ class LoginActivity : AppCompatActivity() {
         Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
     }
 
-    //Guarda quien inicio sesion para que las otras pantallas lo usen (ej. reservar)
     fun guardarSesion(id_usuario: Int, id_rol: Int, nombre: String) {
         val preferencias = getSharedPreferences("sesion", MODE_PRIVATE)
         preferencias.edit()
@@ -97,7 +96,7 @@ class LoginActivity : AppCompatActivity() {
     //Administrador: D01 Reservas (Christian).
     //Mientras Christian sube su Activity abre MainActivity; despues cambia MainActivity por la de Reservas
     fun abrirAdministrador() {
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, AdminReservasActivity::class.java))
         finish()
     }
 }
