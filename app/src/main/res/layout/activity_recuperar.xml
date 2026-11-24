@@ -172,7 +172,7 @@
                 android:hint="@string/phCorreo"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/accesoAzul"
-                android:textColorHint="@color/accesoAzul"
+                android:textColorHint="@color/accesoPlaceholder"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -307,7 +307,7 @@
                 android:hint="@string/phRespuesta"
                 android:inputType="text"
                 android:textColor="@color/accesoAzul"
-                android:textColorHint="@color/accesoAzul"
+                android:textColorHint="@color/accesoPlaceholder"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -344,10 +344,10 @@
                 android:id="@+id/etNueva"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/phContrasena"
+                android:hint="@string/phNueva"
                 android:inputType="textPassword"
                 android:textColor="@color/accesoAzul"
-                android:textColorHint="@color/accesoAzul"
+                android:textColorHint="@color/accesoPlaceholder"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -386,10 +386,10 @@
                 android:id="@+id/etConfirmar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/phContrasena"
+                android:hint="@string/phConfirmar"
                 android:inputType="textPassword"
                 android:textColor="@color/accesoAzul"
-                android:textColorHint="@color/accesoAzul"
+                android:textColorHint="@color/accesoPlaceholder"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>

@@ -1,7 +1,9 @@
 package com.example.pry_appvitancoworking.Vista
 
+import android.graphics.Typeface
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ImageButton
@@ -78,8 +80,15 @@ class RegistroActivity : AppCompatActivity() {
         btnRegresar = findViewById(R.id.btnRegresar)
         pbCargando = findViewById(R.id.pbCargando)
 
-        //lista fija de preguntas con texto azul y en negrita (item_acceso_spinner)
-        val adaptadorPreguntas = ArrayAdapter.createFromResource(this, R.array.preguntasSeguridad, R.layout.item_acceso_spinner)
+        //lista de preguntas: el primer renglon "Elige una pregunta" es el placeholder (en gris),
+        //las preguntas salen en azul y en negrita (item_acceso_spinner)
+        val preguntas = listOf(getString(R.string.phPregunta)) + resources.getStringArray(R.array.preguntasSeguridad)
+        val adaptadorPreguntas = object : ArrayAdapter<String>(this, R.layout.item_acceso_spinner, preguntas) {
+            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View =
+                pintarPregunta(super.getView(position, convertView, parent), position)
+            override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View =
+                pintarPregunta(super.getDropDownView(position, convertView, parent), position)
+        }
         adaptadorPreguntas.setDropDownViewResource(R.layout.item_acceso_spinner)
         spnPregunta.adapter = adaptadorPreguntas
 
@@ -94,8 +103,22 @@ class RegistroActivity : AppCompatActivity() {
         btnRegresar.setOnClickListener { finish() }
     }
 
+    //renglon 0 = placeholder en gris y sin negrita; los demas en azul VITAN y negrita
+    private fun pintarPregunta(renglon: View, posicion: Int): View {
+        val texto = renglon as TextView
+        val esPlaceholder = posicion == 0
+        texto.setTextColor(ContextCompat.getColor(this, if (esPlaceholder) R.color.accesoPlaceholder else R.color.accesoAzul))
+        texto.setTypeface(null, if (esPlaceholder) Typeface.NORMAL else Typeface.BOLD)
+        return texto
+    }
+
     fun ejecutarCrearCuenta(v: View) {
         limpiarErrores()
+        //si sigue en "Elige una pregunta" no se manda nada
+        if (spnPregunta.selectedItemPosition == 0) {
+            mostrarMensaje(getString(R.string.errPregunta))
+            return
+        }
         presentador.crearCuenta(
             rbEmpresa.isChecked,
             etNombre.text.toString().trim(),
@@ -117,8 +140,8 @@ class RegistroActivity : AppCompatActivity() {
             etAm.setText("")
             tilAp.error = null
         }
-        //con Empresa los apellidos se ven grises (desactivados); con Cliente, azul VITAN
-        val colorAyuda = ContextCompat.getColor(this, if (activar) R.color.accesoAzul else R.color.accesoDesactivado)
+        //con Empresa los apellidos se ven desactivados ("No aplica"); con Cliente quedan vacios
+        val colorAyuda = ContextCompat.getColor(this, if (activar) R.color.accesoPlaceholder else R.color.accesoDesactivado)
         etAp.setHintTextColor(colorAyuda)
         etAm.setHintTextColor(colorAyuda)
         //la etiqueta y el texto de ayuda cambian segun Cliente o Empresa

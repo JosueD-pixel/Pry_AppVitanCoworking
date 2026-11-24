@@ -6,6 +6,7 @@
     <color name="accesoBoton">#4361C2</color>         <!-- botones y ligas -->
     <color name="accesoGris">#4A5568</color>          <!-- textos de ayuda -->
     <color name="accesoFondoSuave">#EEF1F8</color>    <!-- cuadros de aviso y de la pregunta -->
+    <color name="accesoPlaceholder">#A0A7B8</color>   <!-- texto de ejemplo (placeholder) en gris, distinto del dato escrito -->
     <color name="accesoDesactivado">#9AA3B5</color>   <!-- apellidos con Empresa -->
     <color name="accesoBlanco">#FFFFFF</color>
 </resources>

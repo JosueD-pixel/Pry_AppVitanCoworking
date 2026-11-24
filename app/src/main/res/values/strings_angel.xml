@@ -6,7 +6,7 @@
     <string name="txtRegresar">Regresar</string>
     <string name="lblCorreo">Correo electrónico</string>
     <string name="phCorreo">nombre@correo.com</string>
-    <string name="phContrasena">••••••••</string>
+    <string name="phContrasena">Escribe tu contraseña</string>
 
     <!-- A01 Iniciar sesion -->
     <string name="txtTituloLogin">Iniciar sesión</string>
@@ -33,12 +33,14 @@
     <string name="lblRespuesta">Respuesta</string>
     <string name="txtAyudaRespuesta">Te la preguntaremos si olvidas tu contraseña</string>
     <string name="btnCrearCuenta">Crear cuenta</string>
-    <string name="phNombre">Ej. Mariana</string>
-    <string name="phAp">Hernández</string>
-    <string name="phAm">Cruz</string>
+    <string name="phNombre"></string>
+    <string name="phAp"></string>
+    <string name="phAm"></string>
     <string name="phNoAplica">No aplica</string>
-    <string name="phTelefono">771 123 4567</string>
-    <string name="phRespuesta">Tu respuesta</string>
+    <string name="phTelefono">Solo números</string>
+    <string name="phRespuesta">Escribe tu respuesta</string>
+    <string name="phPregunta">Elige una pregunta</string>
+    <string name="errPregunta">Elige tu pregunta de seguridad</string>
 
     <!-- A03 / A04 Recuperar cuenta (una sola pantalla en 2 pasos) -->
     <string name="txtTituloRecuperar">Recuperar cuenta</string>
@@ -53,6 +55,8 @@
     <string name="txtAyudaMayusculas">No importan mayúsculas o minúsculas</string>
     <string name="lblNueva">Contraseña nueva</string>
     <string name="lblConfirmar">Confirmar contraseña</string>
+    <string name="phNueva">Escribe tu contraseña nueva</string>
+    <string name="phConfirmar">Repite tu contraseña nueva</string>
     <string name="txtAyudaMinimo">Mínimo 8 caracteres</string>
     <string name="btnCambiarContrasena">Cambiar contraseña</string>
     <string name="txtYaRecordaste">¿Ya la recordaste? <b>Iniciar sesión</b></string>
