@@ -85,18 +85,13 @@ class CancelacionesActivity: AppCompatActivity() {
     //Barra inferior: abre Reservas (D01) o Usuarios (D02) de Christian; Cancelaciones ya es esta pantalla
     fun ejecutarCambiarPestana(item: MenuItem): Boolean {
         when (item.itemId) {
-            //pendiente hasta que Christian suba AdminReservasActivity y AdminUsuariosActivity
-            //R.id.nav_reservas -> abrirPestana(AdminReservasActivity::class.java)
-            //R.id.nav_usuarios -> abrirPestana(AdminUsuariosActivity::class.java)
-            R.id.nav_reservas, R.id.nav_usuarios -> {
-                Toast.makeText(this, "Pantalla todavía no disponible", Toast.LENGTH_SHORT).show()
-                return false
-            }
+            R.id.nav_reservas -> abrirPestana(AdminReservasActivity::class.java)
+            R.id.nav_usuarios -> abrirPestana(AdminUsuariosActivity::class.java)
         }
         return true
     }
 
-    //Cambia de pestana sin animacion y cierra esta pantalla para que no se acumulen (igual que Christian)
+    //Cambia de pestana sin animacion y cierra esta pantalla para que no se acumulen
     private fun abrirPestana(pantalla: Class<*>) {
         val intent = Intent(this, pantalla)
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
